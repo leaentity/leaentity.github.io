@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Fredericka+the+Great&family=Rubik+80s+Fade&display=swap" rel="stylesheet">
+  <title>Lea's Portfolio</title>
+  <link rel="stylesheet" href="style_lea_cover.css">
+</head>
+
+<script src="slider.js"></script>
+
+<body>
+  <div class="photo-section">
+  <button class="photo-nav prev">&lt;</button>
+  <button class="photo-nav next">&gt;</button>
+
+  <a href="portfolio1.html" class="slide active" target="_blank">
+    <img src="images/IMG_3013.JPG" alt="Work 1">
+  </a>
+
+  <a href="portfolio2.html" class="slide" target="_blank">
+    <img src="images/IMG_3014.JPG" alt="Work 2">
+  </a>
+
+  <a href="portfolio3.html" class="slide" target="_blank">
+    <img src="images/IMG_3015.JPG" alt="Work 3">
+  </a>
+</div>
+
+  <div class="info-section">
+    <div class="artist-name"><span class = "first">Lea</span> Wang</div>
+    <div class="bio">
+      Oil Painter exploring light, form, and memory.
+      Based in Shanghai.
+    </div>
+
+    <div class="socials">
+      <a href="#">Portfolio</a>
+      <a href="#">Exhibitions</a>
+      <a href="#">Contact</a>
+      <a href="#">CV</a>
+    </div>
+
+    <!-- <div class="buttons">
+      <button>Portfolio</button>
+      <button>Exhibitions</button>
+      <button>Resume</button>
+      <button>Contact</button>
+    </div> -->
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.photo-section img');
+    let current = 0;
+
+    setInterval(() => {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>

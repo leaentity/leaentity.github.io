@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fredericka the Great", Helvetica, Arial, sans-serif;
+}
+
+body {
+display: flex;
+height: 100vh;
+background-color: #fff;
+color: black;
+margin: 0;
+padding: 0;
+}
+
+.photo-section {
+  width: 75%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  /* min-height: 60vh; */
+}
+
+.photo-section .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: none;
+}
+
+.photo-section .slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.photo-section .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 按钮样式 */
+.photo-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.photo-nav.prev {
+  left: 2rem;
+}
+
+.photo-nav.next {
+  right: 2rem;
+}
+
+.photo-nav:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.15);
+}
+
+
+    /* 右侧：信息区 */
+.info-section {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-end;
+    padding: 5vw 2vw;
+    gap: 3rem;
+    background-color: #ececec;
+    /* background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255,255,255,0.5)),
+    url("images/IMG_3017.JPG");
+    background-size: cover;
+    background-position: center; */
+    }
+
+.artist-name, .bio, .socials, .buttons {
+      /* border: red 1px dashed; */
+      text-align: right;
+    }
+
+.artist-name {
+    width: 100%; 
+    font-size: 80px;
+    line-height: 0.8;
+    font-family: "Rubik 80s Fade", sans-serif;
+    font-weight: 400;
+    opacity: 0.9;
+    }
+
+.first {
+  font-size: 120px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Rubik 80s Fade", sans-serif;
+}
+
+.bio {
+      font-size: 24px;
+      line-height: 1.8;
+      color: black;
+    }
+
+.socials {
+      display: flex;
+      font-size: 28px;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+.socials a {
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid transparent;
+      transition: 0.3s;
+    }
+
+.socials a:hover {
+  text-decoration: underline;
+  }

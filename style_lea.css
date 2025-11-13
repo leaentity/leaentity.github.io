@@ -1,0 +1,38 @@
+.mainword p {
+    /* display: flex; */
+    width: 104vw;
+    /* transform: translateX(-2vw); */
+    font-size: 16px;
+    line-height: 1.8;
+    color: black;
+    line-height: 1;    
+
+}
+
+.big {
+  display: inline-block;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+  transform: scale(5);
+  transform-origin: bottom; /* 以底部为中心放大，不往上顶 */
+}
+
+.hair {
+  /* display: inline-block; */
+  color:blue;
+}
+
+.face {
+  /* display: inline-block; */
+  color:peachpuff
+}
+
+.embossed {
+  font-weight: bold;
+    background: linear-gradient(to bottom, #fff, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    1px 1px 2px rgba(0,0,0,0.3),
+    -1px -1px 2px rgba(255,255,255,0.7);
+}
